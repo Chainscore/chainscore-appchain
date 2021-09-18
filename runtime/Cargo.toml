@@ -32,6 +32,7 @@ pallet-octopus-lpos-reward-curve = { default-features = false, git = "https://gi
 [dependencies.pallet-identity]
 default-features = false
 git = 'https://github.com/prasad-kumkar/pallet-identity.git'
+branch = 'master'
 version = '3.0.0-monthly-2021-08'
 
 [build-dependencies.substrate-wasm-builder]

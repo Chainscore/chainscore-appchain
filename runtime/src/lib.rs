@@ -59,7 +59,7 @@ use sp_runtime::traits::ConvertInto;
 use sp_runtime::traits::Keccak256;
 
 /// Import the template pallet.
-pub use pallet_template;
+pub use pallet_identity;
 
 /// An index to a block.
 pub type BlockNumber = u32;
@@ -600,7 +600,7 @@ impl pallet_sudo::Config for Runtime {
 }
 
 /// Configure the pallet-template in pallets/template.
-impl pallet_template::Config for Runtime {
+impl pallet_identity::Config for Runtime {
 	type Event = Event;
 }
 
@@ -629,7 +629,7 @@ construct_runtime!(
 		Mmr: pallet_mmr::{Pallet, Storage},
 		Beefy: pallet_beefy::{Pallet, Config<T>},
 		// Include the custom logic from the pallet-template in the runtime.
-		TemplateModule: pallet_template::{Pallet, Call, Storage, Event<T>},
+		IdentityModule: pallet_identity::{Pallet, Call, Storage, Event<T>},
 	}
 );
 
@@ -914,7 +914,7 @@ impl_runtime_apis! {
 			add_benchmark!(params, batches, frame_system, SystemBench::<Runtime>);
 			add_benchmark!(params, batches, pallet_balances, Balances);
 			add_benchmark!(params, batches, pallet_timestamp, Timestamp);
-			add_benchmark!(params, batches, pallet_template, TemplateModule);
+			add_benchmark!(params, batches, pallet_identity, IdentityModule);
 
 			if batches.is_empty() { return Err("Benchmark not found for this pallet.".into()) }
 			Ok(batches)

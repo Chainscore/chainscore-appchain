@@ -4161,7 +4161,7 @@ dependencies = [
 [[package]]
 name = "pallet-identity"
 version = "3.0.0"
-source = "git+https://github.com/prasad-kumkar/pallet-identity.git#5b04fab30801a82a321ef5e6abfd9160ec302117"
+source = "git+https://github.com/prasad-kumkar/pallet-identity.git?branch=master#095a4869ff78e4c64b6f3a6bd1515e3772377a47"
 dependencies = [
  "frame-support",
  "frame-system",

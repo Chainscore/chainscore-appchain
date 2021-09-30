@@ -1,4 +1,4 @@
-# Octopus Appchain Template
+# Substrate-based chainscore node
 
 # TODO
 ```
